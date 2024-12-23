@@ -22,6 +22,10 @@ mongoose
 app.use('/login', require('./routes/login'));
 app.use('/subsidy', require('./routes/subsidy'));
 
+app.get("/", (req, res) => {
+  res.send("<center> <h1>Backend in working well, for Subsidy . </h1> <br> <h2>Now Start working Frontend <h2><center>");
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
